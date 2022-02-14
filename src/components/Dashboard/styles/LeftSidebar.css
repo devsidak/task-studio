@@ -1,0 +1,18 @@
+li.css-lo9b43-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: transparent;
+  font-weight: 800;
+  color: #3e98c7;
+}
+
+
+div.MuiListItemIcon-root > .MuiSvgIcon-root {
+  font-size: 24px;
+}
+
+li.css-lo9b43-MuiButtonBase-root-MuiMenuItem-root.Mui-selected
+  div.MuiListItemIcon-root
+  > .MuiSvgIcon-root {
+  color: #ffc148;
+  font-size: 28px;
+
+}

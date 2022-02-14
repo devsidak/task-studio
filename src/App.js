@@ -1,24 +1,39 @@
 import React from "react";
-import Todos from "./TodoList";
 import "./App.css";
-import { Link, Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
+import { auth } from "./config";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "@firebase/auth";
 
 function App() {
+  const [user, setUser] = React.useState(null);
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  //Function for authenticating users from firebase;
+  const Authentication = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        "er.singhsaab@gmail.com",
+        "sidak123232321"
+      );
+      console.log("User - ", user);
+    } catch (e) {
+      console.log("Error - ", e);
+    }
+  };
+
   return (
     <div className="App">
-      <h1>WELCOME TO THE TODO APP</h1>
-      <p>
-        <Link to="/todos">See My Todos !</Link>
-      </p>
-      <p>
-        <Link to="/todos/new">Add Todos !!</Link>
-      </p>
       <Routes>
-        <Route path="/todos/*" element={<Todos/>} />
-        <Route exact path="/" element={() => <Navigate to="/todos" />} />
-
+        <Route path="/*" element={<Dashboard />} />
       </Routes>
-      {/* <Todos /> */}
+       ̰{" "}
     </div>
   );
 }
