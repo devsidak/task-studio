@@ -28,10 +28,10 @@ ChartJS.register(
 );
 
 
-
-
 export const options = {
   responsive: true,
+  maintainAspectRatio: true,
+  width: "100%",
   plugins: {
     legend: {
       position: "top",
@@ -76,7 +76,7 @@ export default function Graph({tasks}) {
   
 
   return (
-    <FeatureBox container mt={6} component={Box}>
+    <FeatureBox container style={{marginTop:"45px"}} sx={{marginTop:1}}   component={Box}>
       <Grid item xs={12}>
         <h3 style={{padding:"10px 7px", textAlign:"start"}} >Overview</h3> 
         <Line data={data} options={options} />

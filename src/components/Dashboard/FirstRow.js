@@ -39,7 +39,7 @@ function FirstRow() {
     <Grid container spacing={6}>
       <Grid item xs={6}>
         <Typographyh4 variant="h4" component="h3">
-          {state[0]} <span style={{ fontSize: "2.5rem" }}>{state[1]}</span>
+          {state[0]} <span style={{ fontSize: "1.5rem" }}>{state[1]}</span>
         </Typographyh4>
       </Grid>
       <Grid item xs={6} style={{ textAlign: "center" }}>
@@ -57,6 +57,7 @@ export default FirstRow;
 
 const Typographyh4 = styled(Typography)`
   font-weight: 400;
+  font-size: ;
 `;
 
 const AddButton = styled(Button)`

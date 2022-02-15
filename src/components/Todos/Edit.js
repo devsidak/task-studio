@@ -26,10 +26,13 @@ function Edit(props) {
 
   return (
     <Grid container spacing={2} align="center" justify="center">
-      <Grid item xs={12}>
+      <Grid item xs={12}
+      >
         <FeatureBox>
           <Grid container spacing={2} align="center" justify="center">
-            <Grid item xs={12}>
+            <Grid item xs={12}
+              
+            >
               <TasksHeading>
                 Add Tasks <span style={{ fontSize: "1.6rem" }}>✓</span>
               </TasksHeading>

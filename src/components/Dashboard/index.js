@@ -99,7 +99,7 @@ function Dashboard(props) {
   //Returning JSX for Rendering;
 
   return (
-    <ContainerBox sx={{ display: "flex", flexDirection: "column", p: 2 }}>
+    <ContainerBox sx={{ display: "flex", flexDirection: "column", p: 0 }}>
       <CssBaseline />
       <Grid
         container
@@ -107,13 +107,15 @@ function Dashboard(props) {
         justifyContent="space-between"
         spacing={0}
       >
-        <Grid item xs={3} md={3} lg={2} style={{ position: "relative" }}>
+        <Grid item xs={3} md={3} lg={2} style={{ position: "relative" }}
+          display={{ xs:"none", md:"flex"}}>
+        
           <LeftBarContainer>
             <LeftSidebar selected={selected} setSelected={setSelected} />
           </LeftBarContainer>
         </Grid>
 
-        <Grid item xs={6} md={6}>
+        <Grid item xs={12} md={9} lg={6}>
           <Box
             component="main"
             className={classes.main}
@@ -123,7 +125,14 @@ function Dashboard(props) {
             {renderRoutes(selected)}
           </Box>
         </Grid>
-        <Grid item xs={3} md={3} lg={3} style={{ position: "relative" }}>
+        <Grid
+          item
+          xs={3}
+          md={3}
+          lg={3}
+          style={{ position: "relative" }}
+          display={{ xs: "none", lg: "flex" }}
+        >
           <RightBarContainer>
             <Calendar />
           </RightBarContainer>

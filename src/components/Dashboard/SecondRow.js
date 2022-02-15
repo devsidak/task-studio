@@ -29,7 +29,7 @@ function SecondRow({ tasks }) {
 
   return (
     <Grid container spacing={5} mt={1}>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <FeatureBox>
           <Grid container spacing="3" alignItems="center">
             <Grid item xs={3}>
@@ -62,7 +62,7 @@ function SecondRow({ tasks }) {
           </Grid>
         </FeatureBox>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <FeatureBox>
           <Grid container spacing="3" alignItems="center">
             <Grid item xs={3}>
